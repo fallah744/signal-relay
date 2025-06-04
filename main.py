@@ -10,7 +10,7 @@ def relay_signal():
         print("📥 دریافت سیگنال:", data)
 
         # ارسال به سرور واقعی مصطفی (لوکال یا ngrok)
-        forward_url = "http://YOUR_SERVER_ADDRESS/signal"
+        forward_url = "http://155.138.217.193/signal"
         response = requests.post(forward_url, json=data, timeout=5)
         return jsonify({"status": "relayed", "from": "Render", "result": response.json()})
     except Exception as e:
